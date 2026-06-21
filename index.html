@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssinia Gym | Addis Ababa, Gerji</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons for Fitness Features -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF5722',
+                        brandDark: '#121212',
+                        brandCard: '#1E1E1E'
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandDark text-white font-roboto selection:bg-brandOrange selection:text-white">
+
+    <!-- TOP INFO BAR (Hidden on small mobile screens for cleaner presentation) -->
+    <div class="bg-[#1a1a1a] border-b border-zinc-800 text-xs text-zinc-400 py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-6">
+                <span><i class="fa-solid fa-location-dot text-brandOrange mr-1"></i> Gerji, Addis Ababa, Ethiopia</span>
+                <a href="tel:0912643473" class="hover:text-brandOrange"><i class="fa-solid fa-phone text-brandOrange mr-1"></i> 0912643473</a>
+                <a href="mailto:habtamukidus96@gmail.com" class="hover:text-brandOrange"><i class="fa-solid fa-envelope text-brandOrange mr-1"></i> habtamukidus96@gmail.com</a>
+            </div>
+            <div class="hidden md:block">
+                <span class="text-zinc-500">Language: </span> English
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Brand Identity -->
+            <div class="flex items-center gap-2">
+                <span class="text-brandOrange text-2xl lg:text-3xl"><i class="fa-solid fa-dumbbell"></i></span>
+                <span class="font-oswald text-xl lg:text-2xl tracking-wider font-bold uppercase">Abyssinia <span class="text-brandOrange">Gym</span></span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider font-medium text-zinc-300">
+                <a href="#" class="text-brandOrange transition">Home</a>
+                <a href="#" class="hover:text-brandOrange transition">User Registration</a>
+                <a href="#" class="hover:text-brandOrange transition">Training Dashboard</a>
+                <a href="#" class="hover:text-brandOrange transition">Services</a>
+                <a href="#" class="hover:text-brandOrange transition">Shop</a>
+                <a href="#" class="hover:text-brandOrange transition">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle Button -->
+            <div class="flex items-center gap-4">
+                <a href="tel:0912643473" class="hidden sm:inline-block bg-brandOrange hover:bg-orange-600 text-white font-oswald uppercase tracking-wider text-sm px-6 py-2.5 rounded transition font-bold">Contact Us</a>
+                <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-zinc-100"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dynamic Navigation Screen Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brandDark border-t border-zinc-800 px-4 py-6 space-y-4 text-center text-md uppercase font-oswald tracking-wide">
+            <a href="#" class="block text-brandOrange py-2">Home</a>
+            <a href="#" class="block hover:text-brandOrange text-zinc-300 py-2">User Registration</a>
+            <a href="#" class="block hover:text-brandOrange text-zinc-300 py-2">Training Dashboard</a>
+            <a href="#" class="block hover:text-brandOrange text-zinc-300 py-2">Services</a>
+            <a href="#" class="block hover:text-brandOrange text-zinc-300 py-2">Shop</a>
+            <a href="#" class="block hover:text-brandOrange text-zinc-300 py-2">Contact</a>
+            <a href="tel:0912643473" class="block bg-brandOrange text-white py-3 rounded-md font-bold">Call Now</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-zinc-950 min-h-[80vh] flex items-center overflow-hidden">
+        <!-- Structural Background Gradients & Graphic Accents -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent z-10"></div>
+        <div class="absolute -right-16 -top-16 w-96 h-96 bg-brandOrange/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <!-- Live-Sourced Contextual Gym Background Image (Representing African/Ethiopian Fitness Landscape) -->
+        <img class="absolute inset-0 w-full h-full object-cover object-center scale-105 transform brightness-50 md:brightness-75" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200" alt="Abyssinia Gym Training Field">
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="inline-block text-brandOrange font-oswald font-bold tracking-widest uppercase border-b-2 border-brandOrange pb-1 text-sm md:text-base">Since - 1998</span>
+                <h1 class="font-oswald text-4xl sm:text-6xl md:text-7xl font-bold uppercase tracking-tight leading-none text-white">
+                    Make Your <br><span class="text-brandOrange">Body Shape</span>
+                </h1>
+                <p class="text-zinc-400 max-w-md mx-auto lg:mx-0 text-sm md:text-base leading-relaxed">
+                    Experience elite fitness in the heart of Addis Ababa, Gerji. Empowering Ethiopian fitness journeys with professional local experts and premier facilities.
+                </p>
+                <div class="pt-4">
+                    <a href="#" class="inline-block bg-brandOrange hover:bg-orange-600 text-white font-oswald text-md font-bold uppercase tracking-widest px-8 py-3.5 transition-all shadow-lg shadow-brandOrange/20">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Right Feature Portrait (Adaptive Circle Framed Graphic Layout) -->
+            <div class="hidden lg:flex justify-center relative">
+                <div class="relative w-96 h-96 rounded-full p-3 border-2 border-dashed border-brandOrange/40">
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-brandOrange">
+                        <img class="w-full h-full object-cover object-top" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600" alt="Ethiopian Athlete Workout">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US FEATURES SECTION -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+            <span class="text-brandOrange text-xs font-oswald uppercase tracking-widest block font-bold">Our Best Features</span>
+            <h2 class="font-oswald text-3xl md:text-4xl font-bold uppercase tracking-wide">Why Choose Us?</h2>
+            <div class="w-16 h-1 bg-brandOrange mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Feature Item 1 -->
+            <div class="bg-brandCard p-8 text-center border-b-4 border-transparent hover:border-brandOrange transition-all group duration-300">
+                <div class="w-14 h-14 bg-zinc-900 text-brandOrange group-hover:bg-brandOrange group-hover:text-white rounded-full flex items-center justify-center text-xl mx-auto mb-6 transition-all">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="font-oswald text-xl uppercase mb-3 font-bold">Progression</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Structured personalized routines meticulously mapped out over weeks to ensure steady performance enhancement.</p>
+            </div>
+
+            <!-- Feature Item 2 -->
+            <div class="bg-brandCard p-8 text-center border-b-4 border-transparent hover:border-brandOrange transition-all group duration-300">
+                <div class="w-14 h-14 bg-zinc-900 text-brandOrange group-hover:bg-brandOrange group-hover:text-white rounded-full flex items-center justify-center text-xl mx-auto mb-6 transition-all">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <h3 class="font-oswald text-xl uppercase mb-3 font-bold">Workout</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Dynamic high-intensity session structures utilizing cutting edge apparatus optimized to shed fat and gain mass.</p>
+            </div>
+
+            <!-- Feature Item 3 -->
+            <div class="bg-brandCard p-8 text-center border-b-4 border-transparent hover:border-brandOrange transition-all group duration-300">
+                <div class="w-14 h-14 bg-zinc-900 text-brandOrange group-hover:bg-brandOrange group-hover:text-white rounded-full flex items-center justify-center text-xl mx-auto mb-6 transition-all">
+                    <i class="fa-solid fa-apple-whole"></i>
+                </div>
+                <h3 class="font-oswald text-xl uppercase mb-3 font-bold">Nutrition</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Custom, locally tailored macro strategies incorporating indigenous, high-protein staple foods.</p>
+            </div>
+
+            <!-- Feature Item 4 -->
+            <div class="bg-brandCard p-8 text-center border-b-4 border-transparent hover:border-brandOrange transition-all group duration-300">
+                <div class="w-14 h-14 bg-zinc-900 text-brandOrange group-hover:bg-brandOrange group-hover:text-white rounded-full flex items-center justify-center text-xl mx-auto mb-6 transition-all">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-oswald text-xl uppercase mb-3 font-bold">Self Defence</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Tactical physical readiness workshops focusing on reflexes, focus, awareness, and agility drills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINING PROGRAMS / SERVICES SECTION -->
+    <section class="bg-zinc-950 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+                <span class="text-brandOrange text-xs font-oswald uppercase tracking-widest block font-bold">Our Services</span>
+                <h2 class="font-oswald text-3xl md:text-4xl font-bold uppercase tracking-wide">Training Programs</h2>
+                <div class="w-16 h-1 bg-brandOrange mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div class="bg-brandCard group overflow-hidden rounded-md transition">
+                    <div class="h-52 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition duration-500 brightness-90" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=500" alt="Cardio Strength">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-oswald text-xl uppercase mb-3 font-bold tracking-wide">Cardio Strength</h3>
+                        <p class="text-zinc-400 text-sm">High-energy cardiovascular conditioning to maximize your stamina, fat burn rate, and baseline metabolic performance metrics.</p>
+                    </div>
+                </div>
+
+                <!-- Program Card 2 -->
+                <div class="bg-brandCard group overflow-hidden rounded-md transition">
+                    <div class="h-52 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition duration-500 brightness-90" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=500" alt="Weight Lifting">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-oswald text-xl uppercase mb-3 font-bold tracking-wide">Weight Lifting</h3>
+                        <p class="text-zinc-400 text-sm">Professional heavy compound lifting mechanics and programmatic hypertrophy builds tailored for safety and peak athletic power.</p>
+                    </div>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="bg-brandCard group overflow-hidden rounded-md transition">
+                    <div class="h-52 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition duration-500 brightness-90" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=500" alt="Body Balance">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-oswald text-xl uppercase mb-3 font-bold tracking-wide">Body Balance</h3>
+                        <p class="text-zinc-400 text-sm">Calisthenic control, dynamic core strengthening, and absolute physical flexibility protocols to keep joints resilient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT INFO -->
+    <footer class="bg-brandDark border-t border-zinc-900 py-12 text-center text-sm text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <p class="font-oswald text-zinc-300 uppercase tracking-widest text-base font-bold">Abyssinia Gym &copy; 2026</p>
+            <p class="text-zinc-400">Gerji, Addis Ababa, Ethiopia &bull; <a href="tel:0912643473" class="hover:text-brandOrange">0912643473</a></p>
+            <p class="text-xs">Layout referenced intentionally from <span class="text-zinc-400">"20+ Best WordPress Themes For Fitness Websites (2026).jpeg"</span>.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MENU TOGGLE SCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
